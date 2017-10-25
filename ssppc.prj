@@ -1,0 +1,149 @@
+<project version="Crimson Editor 3.60">
+	<localfile path="C:\cygwin\home\jdonald\ssppc\bitmap.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\bpred.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\bpred.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\cache.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\cache.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\dlite.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\dlite.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\eio.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\eio.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\encode.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\endian.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\endian.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\eval.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\eval.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\eventq.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\eventq.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\flp.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\flp.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\foob.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\host.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\hotspot.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\ieee-fp.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\ieee-fp.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\interactive-cmd.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\interactive-cmd.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\interactive-cmdlist.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\interactive-read.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\interactive-read.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\interactive-types.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\interactive-types.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\loader.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\loader.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\main.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\memory.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\memory.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\misc.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\misc.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\options.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\options.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\power.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\power.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\powerpc-trace.def" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\powerpc.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\powerpc.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\ppcmacros.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\predecode.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\ptrace.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\ptrace.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\range.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\range.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\RC.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\RCutil.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\regs.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\regs.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\resource.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\resource.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-bpred.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-cache.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-cheetah.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-eio.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-fast.another.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-fast.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-fast.old.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-outorder.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-profile.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-safe.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-trace.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\stats.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\stats.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\symbol.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\symbol.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\syscall.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\syscall.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\syscall_types.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sysprobe.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\temperature.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\time.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\util.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\util.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\version.h" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\wattch-interact.c" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\xcoff.h" />
+</project>
+
+<workspace version="Crimson Editor 3.60">
+	<localfile path="C:\cygwin\home\jdonald\ssppc\encode.c" linenum="1" placement="0:1:-1:-1:-4:-30:66:87:855:528" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\bitmap.h" linenum="1" placement="0:1:-1:-1:-4:-30:88:116:881:561" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\hotspot.c" linenum="1" placement="0:1:-1:-1:-4:-30:110:145:903:590" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-outorder.c" linenum="2182" placement="0:1:-1:-1:-4:-30:132:174:925:619" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\compile.smt.pl" linenum="107" placement="0:1:-1:-1:-4:-30:110:145:794:533" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\init.macros" linenum="1" placement="0:1:-1:-1:-4:-30:22:29:706:417" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\fxu_scale_power.macros" linenum="63" placement="0:1:-1:-1:-4:-30:44:58:728:446" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\fpu_scale_power.macros" linenum="56" placement="0:1:-1:-1:-4:-30:66:87:750:475" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\isu_scale_power.macros" linenum="54" placement="0:1:-1:-1:-4:-30:88:116:772:504" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\scale_var.macros" linenum="1" placement="0:1:-1:-1:-4:-30:110:145:794:533" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\scale_power.macros" linenum="20" placement="0:1:-1:-1:-4:-30:132:174:816:562" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\params.macros" linenum="76" placement="0:1:-1:-1:-4:-30:0:0:684:388" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\power.dump.macros" linenum="292" placement="0:1:-1:-1:-4:-30:22:29:706:417" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\power.status.macros" linenum="612" placement="0:1:-1:-1:-4:-30:44:58:728:446" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\power.read.macros" linenum="290" placement="0:1:-1:-1:-4:-30:88:116:772:504" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\reset.macros" linenum="138" placement="0:1:-1:-1:-4:-30:110:145:794:533" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\temp_inner.macros" linenum="10" placement="0:1:-1:-1:-4:-30:132:174:816:562" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\ifu_scale_macro.macros" linenum="1" placement="0:1:-1:-1:-4:-30:0:0:684:388" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\ifu_scale_power.macros" linenum="297" placement="0:1:-1:-1:-4:-30:22:29:706:417" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\gp_parms.pl" linenum="266" placement="0:1:-1:-1:-4:-30:44:58:728:446" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\l2sync.macros" linenum="18" placement="0:1:-1:-1:-4:-30:66:87:750:475" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\turandot.c" linenum="2428" placement="0:1:-1:-1:-4:-30:44:58:990:550" />
+	<localfile path="C:\cygwin\home\jdonald\3d_graph.c" linenum="65" placement="0:1:-1:-1:-4:-30:66:87:1012:579" />
+	<localfile path="C:\Documents and Settings\jdonald\My Documents\megamanx_dumbpass.txt" linenum="1" placement="0:1:-1:-1:-4:-30:22:29:768:342" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\turandot_changes.txt" linenum="1" placement="0:1:-1:-1:-4:-30:0:0:746:313" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\array.c" linenum="107" placement="0:1:-1:-1:-4:-30:88:116:834:429" />
+	<localfile path="C:\Documents and Settings\jdonald\My Documents\neil_zcat.txt" linenum="1" placement="0:1:-1:-1:-4:-30:22:29:768:342" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\environment\idears.txt" linenum="1" placement="0:1:-1:-1:-4:-30:88:116:834:431" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\ssppc_changes.txt" linenum="1" placement="0:1:-1:-1:-4:-30:0:0:746:315" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\ssppc_basic_timing_test.txt" linenum="1" placement="0:1:-1:-1:-4:-30:44:58:790:373" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\syscall.h" linenum="190" placement="0:1:-1:-1:-4:-30:66:87:812:402" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\syscall.c" linenum="6" placement="0:1:-1:-1:-4:-30:88:116:834:431" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\loader.c" linenum="706" placement="0:1:-1:-1:-4:-30:0:0:746:315" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\elf.h" linenum="1" placement="0:1:-1:-1:-4:-30:22:29:768:344" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\symbol.c" linenum="99" placement="0:1:-1:-1:-4:-30:44:58:790:373" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\loader.c" linenum="1" placement="0:1:-1:-1:-4:-30:88:116:875:513" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\target-ppc\syscall_types.h" linenum="1" placement="0:1:-1:-1:-4:-30:110:145:897:542" />
+	<localfile path="C:\cygwin\home\jdonald\turandot_cmp\Sources\turandot\src\stage_ifetch.macros" linenum="637" placement="0:1:-1:-1:-4:-30:0:0:796:422" />
+	<localfile path="C:\Documents and Settings\jdonald\My Documents\not_forgotten.txt" linenum="17" placement="0:1:-1:-1:-4:-30:66:87:782:476" />
+	<localfile path="C:\Documents and Settings\jdonald\Desktop\index.html" linenum="116" placement="0:1:-1:-1:-4:-30:88:116:804:505" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\cache.c" linenum="1" placement="0:1:-1:-1:-4:-30:132:174:848:563" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\flp.c" linenum="83" placement="0:1:-1:-1:-4:-30:0:0:716:389" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\sim-cache.c" linenum="140" placement="0:1:-1:-1:-4:-30:22:29:738:418" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\cache.h" linenum="174" placement="0:1:-1:-1:-4:-30:44:58:760:447" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\main.c" linenum="392" placement="0:1:-1:-1:-4:-30:66:87:782:476" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\stats.c" linenum="28" placement="0:1:-1:-1:-4:-30:88:116:804:505" />
+	<localfile path="C:\cygwin\home\jdonald\ssppc\README.multicore" linenum="1" placement="0:1:-1:-1:-4:-30:132:174:848:563" />
+	<localfile path="H:\ispass_todo.txt" linenum="13" placement="2:3:-1:-1:-4:-30:22:29:768:340" />
+	<localfile path="H:\relos\src\syn\syn.c" linenum="365" placement="0:1:-1:-1:-4:-30:0:0:696:355" />
+	<localfile path="H:\relos\src\sim\sim.c" linenum="149" placement="0:1:-1:-1:-4:-30:66:87:812:397" />
+	<localfile path="H:\relos\src\pprmgen\from_esop.c" linenum="11" placement="0:1:-1:-1:-4:-30:88:116:834:426" />
+	<localfile path="H:\relos\src\relos\qnetwork.c" linenum="351" placement="0:1:-1:-1:-4:-30:110:145:936:506" />
+	<localfile path="H:\relos\src\relos\relos.h" linenum="7" placement="0:1:-1:-1:-4:-30:0:0:826:361" />
+	<localfile path="H:\relos\src\relos\read_netlist.c" linenum="216" placement="0:1:-1:-1:-4:-30:22:29:848:390" />
+	<localfile path="H:\relos\src\relos\write_netlist.c" linenum="200" placement="0:1:-1:-1:-4:-30:44:58:870:419" />
+	<localfile path="H:\relos\src\relos\qgate.c" linenum="237" placement="0:1:-1:-1:-4:-30:66:87:892:448" />
+	<localfile path="H:\relos\src\relos\relos_tokens.h" linenum="36" placement="0:1:-1:-1:-4:-30:88:116:914:477" />
+	<localfile path="H:\relos\src\relos\cost.c" linenum="294" placement="0:1:-1:-1:-4:-30:110:145:834:454" />
+	<localfile path="H:\relos\src\relos\relos.c" linenum="1" placement="0:1:-1:-1:-4:-30:0:0:724:309" />
+	<localfile path="H:\relos\src\relos\basiccom.c" linenum="320" placement="0:1:-1:-1:-4:-30:22:29:746:338" />
+</workspace>
+

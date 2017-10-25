@@ -1,0 +1,7 @@
+ble
+beq
+cmpi cr0
+bnel
+bge
+
+crorc  - does not seem to work??? 0x100068a0 test-static

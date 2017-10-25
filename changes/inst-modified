@@ -1,0 +1,19 @@
+Instructions modifued by karu:
+
+addic
+cmpi
+addicd
+lmw
+stmw
+bc
+bclr
+crxor
+crorc
+bcctr
+rlwinm
+rlwinmd
+dcbt
+lswx
+lswi
+stswi
+

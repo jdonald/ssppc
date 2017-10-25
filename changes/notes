@@ -1,0 +1,26 @@
+#elif defined(TARGET_PPC)
+#define VER_TARGET              "PPC"
+
+added the prev 2 lines to version.h
+
+modified implementation stuff for crorc in powerpc.def
+
+cmpi cmpi cr4, 0, r28, 0x8
+cr has value 0x84222842
+when r28 has value 0x3, the instruction sets cr to 4228842
+it should actually be 8228842
+the problem is with cmpi implementation :-((((
+
+modified stmw write_word (src, dst) were interchanged
+
+in address 0x10010b24 lwz r11, 0x10c(r2)
+
+reads into r11 the value from the TOC. in the TOC 0x10c(r12) points to 
+a lable called _system_configuration. dont know what this means. appararently this is loaded with some system default values. the actualy aix loader on alta writes 0x34e0 into this place. simulator ignores this value and doesn't write anytihng in the toc and it remains zero.
+
+contents of 0x34e0 
+0x34e0: 0x00000002      0x00000010      0x00050000      0x00000020
+0x34f0: 0x00000004      0x00000001      0x00008000      0x00008000
+0x3500: 0x00000004      0x00000004
+
+find out what sould be done about this.

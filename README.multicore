@@ -1,0 +1,89 @@
+This document contains brief instructions for running the parallel
+multicore edition of SimpleScalar PowerPC. For details on various specific
+features, for the time being the source code itself might be the best form
+of documentation. Be sure to check back often for updates at
+http://parapet.ee.princeton.edu/ssppc/
+
+Last updated: May 9, 2007
+
+To avoid the trouble of thinking up a version number system, versions are
+identified simply by a date as shown above. The svn metadata was meant to
+also come in handy to quickly identify modifications. However, I've now
+opted to remove the .svn dirs in order to shrink the archive.
+
+If you use this infrastructure as a basis for your research, please
+include citations to the first or both of the following papers in your
+references:
+  - James Donald and Margaret Martonosi, "An Efficient, Practical
+      Parallelization Methodology for Multicore Architecture Simulation,"
+      Computer Architecture Letters, vol. 5, August 2006.
+  - Karthikeyan Sankaralingam, Ramadass Nagarajan, Stephen W. Keckler, and
+      Doug Burger, "SimpleScalar Simulation of the PowerPC Instruction Set
+      Architecture," UT Austin Technical Report: CS-TR-00-04, 2001.
+
+--------------------------------------------------------------------------
+
+To compile everything, just type make. You do not need to run config-ppc.
+Everything should already be compatible and ready to build on Linux or
+Cygwin.
+
+At this time, I do not have any intentions of attempting to make this
+package compatible with AIX or Solaris.
+
+Due to bugs in older versions of gcc, this package cannot be built with
+any gcc package older than gcc version 4. For gcc 3.4.x and older
+compilers, it would inevitably crash when encountering too many thread-
+local storage variables.
+
+Testing of this package has been done primarily using gcc 4.0.2 and 4.1.1.
+
+--------------------------------------------------------------------------
+
+To run multiple programs across multiple cores, simply pass all EIO
+traces as arguments to ./sim-outorder. For example, the command:
+
+    ./sim-outorder applu.eio.bz2 bzip2.eio.bz2 gap.eio.bz2
+
+would run the three programs across three cores. See README.eio for
+instructions on how to generate EIO traces. I recommend using only EIO
+traces rather than application binaries, but there is also the option of
+using a regular binary with arguments for the last input. For example,
+
+    ./sim-outorder mesa.eio.bz2 mgrid.eio.bz2 ./gzip input.program
+
+would run gzip on the third core, although not from an EIO trace.
+
+sim-outorder also now allows multiple checkpoints to be specified as shown
+in the following example. You may need to use a dummy option so that the
+parser can figure out where the checkpoint list ends.
+
+    ./sim-outorder -chkpt applu.chkpt.bz2 bzip2.chkpt.bz2 -max:inst 1000 \
+        applu.eio.bz2 bzip2.eio.bz2
+
+--------------------------------------------------------------------------
+
+Wattch and HotSpot are implemented and both turned on by default.
+
+To turn off power and temperature modeling, you can edit the Makefile to
+force in the following flags on all modules:
+    -DPOWER_MODE=0 -DTEMPERATURE=0
+
+In an attempt to make the infrastructure more configurable, I have pulled
+in necessary pieces for the PISA, Alpha, ARM, and x86 ISA support. These
+all can be built without errors, but have not been tested for any proper
+functionality. For ARM, currently sim-uop works but sim-outorder gives
+decoding errors apparently due to uop translation. After building
+'config-arm' and sim-outorder, you may run:
+     ./sim-outorder gzip.arm main.c
+to observe this. For Alpha, currently there sometimes to be an odd problem
+decoding the JSR instruction. After building 'config-alpha' and sim-fast,
+you may run:
+     ./sim-fast gzip.alpha main.c
+to observe this. If you happen to locate the cause of these bugs, please
+let me know.
+
+--------------------------------------------------------------------------
+
+The sim-trace program should be pretty self-explanatory. Just type
+./sim-trace the prompt to see a list of options. This program does not
+have any use when building for an ISA other than PowerPC.

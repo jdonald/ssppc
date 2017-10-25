@@ -1,0 +1,70 @@
+syscalls kioctl, lseek to be implemented for gcc, m88k simulator to work
+
+0x10045f48
+0x10045f44
+
+3340, 7575
+4143, 8378
+
+sycalls read, write, open implemented "natively" by calling the functions
+read, write, open. there may be some problems with the flags in these calls
+when we eventually make a cross platform port.
+
+verify subfmeo, addzeo, subfzeo,nego . the opcode seems to be subfme, addze, subfze * 3 instead of *4. check it out.
+
+millicodes - see millicode.h called in loader!
+the actual definitions are in /lib/syscalls.exp
+these are millicode instructions executed by jumping to hardwired addresses
+in memory.
+we write those exact instructions in memory and EMULATE in full by jumping
+to those address and returning to main program by jumping to LR from the
+millicode routine. jump to millicode done using BLA 
+
+all FP instructions implemented in inline assembly so that
+we can preserve/update status of FPSCR
+
+FP instructions fctid, fctidz, fcfid to be added
+
+old cmpli implementation. new defn. is partly lifted from simple.c
+   if(ISSETL) {                                                    \
+                DECLARE_FAULT(md_fault_invalidinstruction);             \
+        }                                                               \
+   else{                      \
+           _a = GPR(RA);                                           \
+         _b = UIMM;                                              \
+            if(_a<_b) _c=0x8;                                       \
+         else{                                                   \
+                  if (_a>_b) _c=0x4;                              \
+                     else      _c=0x2;                               \
+         }                                                       \
+         _c = _c | (PPC_GET_XER_SO);                             \
+         _c = _c << ( (7-CRFD)*4 );                              \
+         if(CRFD==0){                                            \
+                  _mask = 0xf << 28;                              \
+                  PPC_SET_CR(  (CR & (~(_mask))) | _c );          \
+         }                                                       \
+         else{                                                   \
+                  _d = _c <<28;                                   \
+                  _mask = (0xf << ( (7-CRFD)*4 )) | 0xf0000000;   \
+                  PPC_SET_CR(  (CR & (~(_mask)))| _c | _d);       \
+         }                                                       \
+         }                                                          \
+
+old rlwimi impl
+
+#define RLWIMI_IMPL                    \
+   {                          \
+   word_t _n, _r, _m;                  \
+   int _i, _c;                   \
+   _n = SH;                   \
+   _r = ((word_t)GPR(RS))<< _n;              \
+   _c = ME-MB+1;                    \
+   for(_i=0; _i<_c; _i++)                 \
+   {                       \
+      _m = (_m <<1) | 0x1;             \
+   }                       \
+   _m = _m << (31-ME);                 \
+   SET_GPR(RA, ( (_r & _m) | (GPR(RA) & (~ (_m))) ) );         \
+   }
+
+

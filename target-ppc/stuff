@@ -1,0 +1,107 @@
+sycalls read, write, open implemented "natively" by calling the functions
+read, write, open. there may be some problems with the flags in these calls
+when we eventually make a cross platform port.
+
+verify subfmeo, addzeo, subfzeo,nego . the opcode seems to be subfme, addze, subfze * 3 instead of *4. check it out.
+
+millicodes - see millicode.h called in loader!
+there is a writemillicode and writemillicodedecode
+		the decode function takes of predecoding by writing to memory address*2
+
+the actual definitions are in  /lib/syscall.exp
+Their code was given to me by pat bohrer millicode.s
+these are millicode instructions executed by jumping to hardwired addresses
+in memory.
+we write those exact instructions in memory and EMULATE in full by jumping
+to those address and returning to main program by jumping to LR from the
+millicode routine. jump to millicode done using BLA 
+
+all FP instructions implemented in inline assembly so that
+we can preserve/update status of FPSCR
+
+FP instructions fctid, fctidz, fcfid to be added
+
+_system_configuration is a special data structure that contains info
+on the system. see /usr/include/sys/systemcfg.h Pat pointed it out to me.
+it is a relocatable reference.
+
+we fill the data structure with values in loader.c and push it on the stack
+and save this address in the TOC value.
+
+printf seems to use this code somewhere. Right now only first two values are filled. the others may need to by filled as and when required.
+
+before doing this there was a hack in the main loop of sim-fast which scanned for this instruction..... if things screw up try inserting this code back,
+
+--- code begin
+
+	      if (inst == 0x818b0004) {
+#ifdef PPC_DEBUG
+         printf("INST Hack to make printf work.\n");
+         printf("because of not implementing _system_configuration ....\n");
+#endif
+         see AIX standard include files for definition of what this contains
+         this originates from the _system_configuration thing
+         fprintf(stderr, "INST Hack to make printf work.\n");
+         fprintf(stderr, "because of not implementing _system_configuration ....
+\n");
+
+         regs.regs_R[12] = 0x10;
+         inst = 0x7c000378;
+         op = (enum md_opcode) (OR);
+      }
+
+--- end
+
+
+old way of doing system calls - before using function pointers and SC
+
+--- begin
+      mem_access(mem, Read, regs.regs_PC, &inst, 4);
+      if ( (inst >> 16) == 0x8182) {
+         gotasyscall = 1;
+         for (tempi = 1; tempi < 6; tempi++) {
+            mem_access(mem, Read, regs.regs_PC+tempi*4, &inst, 4);
+            if (sys_inst[tempi] != inst) {
+               gotasyscall = 0;
+               break;
+            }
+         }
+      }
+
+		get opcode, inst...
+
+      if ( (gotasyscall) && (inst == 0x4e800420) && (1==2) ) {
+
+         mem_access(mem, Read, regs.regs_R[12], &syscallnumber1, 4)  ;
+         mem_access(mem, Read, regs.regs_R[12]+4, &syscallnumber, 4);
+
+#ifdef PPC_DEBUG
+         printf("INST SYS BYTE %x \n", (int) syscallnumber);
+         printf("INST Doing a BLCR right now... :-)\n");
+#endif
+         ppc_syscall_fn = regs.regs_R[0];
+         printf("SYS PC %x \n", regs.regs_PC);
+         ppc_syscall_fn(&regs, mem);
+         switch (syscallnumber) {
+            case SYSCALL_VALUE_SBRK:
+#ifdef PPC_DEBUG
+               printf("INST sbrk called with %x returning %x\n", regs.regs_R[3],
+ ld_brk_point);
+#endif
+               //regs.regs_R[3] = ld_brk_point ;
+               syscall_sbrk(&regs, mem);
+               break;
+....
+            default:
+               printf("ALERT: Not implemented yet PC %x\n", regs.regs_PC );
+               break;
+         }
+         inst = 0x4e800020;
+         op = BCLR;
+         gotasyscall = 0;
+      }
+
+
+
+
+--- end

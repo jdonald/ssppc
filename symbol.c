@@ -1,0 +1,1 @@
+target-ppc/symbol.c

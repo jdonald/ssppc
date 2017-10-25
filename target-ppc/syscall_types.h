@@ -1,0 +1,24 @@
+struct aix_stat {
+    word_t st_dev;
+    word_t st_ino;
+    word_t st_mode;
+    /*nlink_t*/ half_t st_nlink;
+    /* ushort_t */ half_t st_flag;
+    /* uid_t */ word_t st_uid;
+    /* gid_t */ word_t st_gid;
+    /* dev_t */ word_t st_rdev;
+    /* off_t */ word_t st_size;
+    /* time_t */ word_t statime;
+    /*int */ word_t st_spare;
+    /* time_t */ word_t stmtime;
+    /* int */ word_t st_spare__;
+    /* time_t */ word_t stctime;
+    int st_spare___;
+    /* blksize_t */ word_t st_blksize;
+    /* blkcnt_t */ word_t st_blocks;
+    int st_vfstype;
+    /* uint_t */ unsigned int st_vfs;
+    /* uint_t */ unsigned int st_type;
+    /* uint_t */ unsigned int st_gen;
+    /* uint_t */ unsigned int st_reserved[9];
+};

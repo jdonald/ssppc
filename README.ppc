@@ -1,0 +1,27 @@
+This is the PowerPC port of SimpleScalar 3.0
+
+For documentation please get the tech report at www.cs.utexas.edu/~cart
+or www.simplescalar.org
+
+There are no specific problems/issues if you are compiling on an AIX machine.
+
+Cross platform compilation:
+Compiles only on Sun SOLARIS.
+You need to modify the Makefile and add to MFLAGS:
+
+-DSOLARIS
+MFLAGS = `./sysprobe -flags` -DSOLARIS
+
+and remove -mpowerpc from OFLAGS
+
+And specifically create the symlink for powerpc-nonnative.def after doing
+make config-ppc.
+
+To compile:
+
+make clean
+make config-ppc
+ln -s target-ppc/powerpc-nonnative.def ./machine.def
+make sim-fast
+
+
